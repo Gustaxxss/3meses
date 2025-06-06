@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>3 Meses com você 💖</title>
+  <title>3 Meses com Ana 💖</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     body {
-      background: linear-gradient(135deg, #ffcccc, #a83232);
+      background: linear-gradient(135deg, #1c1c1c, #2f2f2f);
       font-family: 'Montserrat', sans-serif;
-      color: #4a2c2a;
+      color: #e0e0e0;
       margin: 0;
       padding: 0 20px 40px;
       display: flex;
@@ -24,7 +24,7 @@
       font-size: 3.5rem;
       margin-bottom: 5px;
       color: #a83232;
-      text-shadow: 1px 1px 3px #fff6f6;
+      text-shadow: 0 0 5px #000;
       margin-top: 30px;
     }
     h2 {
@@ -32,58 +32,60 @@
       font-size: 1.2rem;
       margin-top: 0;
       margin-bottom: 30px;
-      color: #6e3a3a;
+      color: #ccc;
     }
     #foto {
       width: 180px;
       height: 180px;
       border-radius: 90px;
       object-fit: cover;
-      border: 4px solid #a83232;
-      box-shadow: 0 0 15px rgba(168, 50, 50, 0.6);
+      border: 3px solid #a83232;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
       margin-bottom: 25px;
     }
     #contador {
       font-size: 1.7rem;
-      background: rgba(255 255 255 / 0.7);
+      background: rgba(255, 255, 255, 0.05);
       border-radius: 12px;
       padding: 20px 30px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+      border: 1px solid #444;
       max-width: 350px;
       margin-bottom: 40px;
     }
     .tempo-item {
       margin: 10px 0;
       font-weight: 700;
-      color: #7f3a3a;
+      color: #ffdddd;
     }
     #mensagem {
       font-style: italic;
       font-size: 1.3rem;
-      color: #572020;
+      color: #f0f0f0;
       max-width: 380px;
       line-height: 1.4;
       margin-bottom: 30px;
     }
     #extra-text {
       font-size: 1.1rem;
-      color: #6a2b2b;
+      color: #ddd;
       max-width: 380px;
       margin-bottom: 35px;
       line-height: 1.5;
     }
     #game-container {
-      background: rgba(255 255 255 / 0.8);
+      background: rgba(255, 255, 255, 0.03);
       border-radius: 12px;
       padding: 20px 30px;
       max-width: 350px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.03);
+      border: 1px solid #444;
       margin-bottom: 30px;
       user-select: none;
     }
     #heart-btn {
       font-size: 4rem;
-      color: #e03131;
+      color: #ff3b3b;
       cursor: pointer;
       transition: transform 0.1s ease;
       user-select: none;
@@ -125,7 +127,7 @@
   </style>
 </head>
 <body>
-  <h1>3 meses com você 💖</h1>
+  <h1>3 meses com Ana 💖</h1>
   <h2>Desde 05 de Março de 2025</h2>
   
   <img id="foto" src="https://i.postimg.cc/B6ZnyJbd/IMG-0131.jpg" alt="Foto do casal" />
@@ -138,10 +140,10 @@
     <div class="tempo-item" id="segundos"></div>
   </div>
   
-  <p id="mensagem">Três meses cheios de carinho, sorrisos e momentos inesquecíveis. Que venham muitos mais juntos! ❤️</p>
+  <p id="mensagem">Três meses intensos, apaixonados e inesquecíveis. Cada momento ao seu lado vale ouro. 💋</p>
   
   <p id="extra-text">
-    Ana, cada dia ao seu lado é uma nova aventura que me enche de alegria e amor. Obrigado por ser essa pessoa incrível que transforma tudo em felicidade. Te amo demais! 💕
+    Ana, você é meu segredo favorito, minha calmaria e minha tempestade. Que nossa história continue intensa, verdadeira e cheia de amor. Te amo demais! 💘
   </p>
 
   <div id="game-container">
@@ -162,7 +164,7 @@
       const min = seg * 60;
       const hr = min * 60;
       const dia = hr * 24;
-      const mes = dia * 30; // média de 30 dias por mês
+      const mes = dia * 30;
 
       const meses = Math.floor(diff / mes);
       diff -= meses * mes;
@@ -179,16 +181,16 @@
       const segundos = Math.floor(diff / seg);
 
       document.getElementById("meses").textContent = `${meses} ${meses === 1 ? 'mês' : 'meses'}`;
-      document.getElementById("dias").textContent = `${dias} dia${dias !== 1 ? 's' : ''}`;
-      document.getElementById("horas").textContent = `${horas} hora${horas !== 1 ? 's' : ''}`;
-      document.getElementById("minutos").textContent = `${minutos} minuto${minutos !== 1 ? 's' : ''}`;
-      document.getElementById("segundos").textContent = `${segundos} segundo${segundos !== 1 ? 's' : ''}`;
+      document.getElementById("dias").textContent = `${dias} ${dias === 1 ? 'dia' : 'dias'}`;
+      document.getElementById("horas").textContent = `${horas} ${horas === 1 ? 'hora' : 'horas'}`;
+      document.getElementById("minutos").textContent = `${minutos} ${minutos === 1 ? 'minuto' : 'minutos'}`;
+      document.getElementById("segundos").textContent = `${segundos} ${segundos === 1 ? 'segundo' : 'segundos'}`;
     }
 
     setInterval(atualizarContador, 1000);
     atualizarContador();
 
-    // Jogo do clique no coração
+    // Jogo do coração
     let loveClicks = 0;
     const heartBtn = document.getElementById('heart-btn');
     const loveCount = document.getElementById('love-count');
@@ -196,7 +198,6 @@
     heartBtn.addEventListener('click', () => {
       loveClicks++;
       loveCount.textContent = `${loveClicks} clique${loveClicks !== 1 ? 's' : ''} de amor`;
-      // Pequena animação de pulso no coração
       heartBtn.style.transform = 'scale(1.2)';
       setTimeout(() => {
         heartBtn.style.transform = 'scale(1)';
