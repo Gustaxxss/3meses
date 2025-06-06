@@ -178,7 +178,7 @@
 
       const segundos = Math.floor(diff / seg);
 
-      document.getElementById("meses").textContent = `${meses} mês${meses !== 1 ? 'es' : ''}`;
+      document.getElementById("meses").textContent = `${meses} ${meses === 1 ? 'mês' : 'meses'}`;
       document.getElementById("dias").textContent = `${dias} dia${dias !== 1 ? 's' : ''}`;
       document.getElementById("horas").textContent = `${horas} hora${horas !== 1 ? 's' : ''}`;
       document.getElementById("minutos").textContent = `${minutos} minuto${minutos !== 1 ? 's' : ''}`;
