@@ -3,255 +3,205 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>3 Meses com Ana</title>
+  <title>3 Meses com Ana 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      background: linear-gradient(135deg, #d9c2ff, #f7e5f7);
-      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fceabb, #f8b500);
+      font-family: 'Montserrat', sans-serif;
+      color: #4a2c2a;
+      margin: 0;
+      padding: 0 20px 40px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       min-height: 100vh;
-      color: #6a2c70;
+      justify-content: flex-start;
       text-align: center;
-      padding: 20px;
-      position: relative;
-      overflow-x: hidden;
     }
-
     h1 {
-      font-size: 3.2rem;
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5rem;
       margin-bottom: 5px;
-      font-weight: 600;
-      color: #8e44ad;
-      text-shadow: 1px 1px 5px rgba(174, 101, 255, 0.7);
+      color: #a83232;
+      text-shadow: 1px 1px 3px #fff6f6;
+      margin-top: 30px;
     }
-
-    p.subtitle {
+    h2 {
+      font-weight: 700;
       font-size: 1.2rem;
-      margin-bottom: 35px;
-      font-weight: 500;
-      color: #5a1f63;
+      margin-top: 0;
+      margin-bottom: 30px;
+      color: #6e3a3a;
     }
-
-    /* Foto do casal */
-    .photo-container {
+    #foto {
       width: 180px;
       height: 180px;
-      border-radius: 50%;
-      overflow: hidden;
-      box-shadow: 0 8px 20px rgba(138, 43, 226, 0.3);
-      margin-bottom: 30px;
-      border: 4px solid #a065ff;
-    }
-
-    .photo-container img {
-      width: 100%;
-      height: 100%;
+      border-radius: 90px;
       object-fit: cover;
+      border: 4px solid #a83232;
+      box-shadow: 0 0 15px rgba(168, 50, 50, 0.6);
+      margin-bottom: 25px;
     }
-
-    .countdown {
-      display: flex;
-      gap: 25px;
-      justify-content: center;
-      flex-wrap: wrap;
+    #contador {
+      font-size: 1.7rem;
+      background: rgba(255 255 255 / 0.7);
+      border-radius: 12px;
+      padding: 20px 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 350px;
       margin-bottom: 40px;
     }
-
-    .countdown-item {
-      background: #f0e5ffcc;
-      border-radius: 15px;
-      padding: 25px 30px;
-      width: 110px;
-      box-shadow: 0 4px 10px rgba(138, 43, 226, 0.2);
-      transition: transform 0.3s ease;
-      cursor: default;
-    }
-
-    .countdown-item:hover {
-      transform: scale(1.1);
-      box-shadow: 0 6px 16px rgba(138, 43, 226, 0.4);
-    }
-
-    .number {
-      font-size: 3.2rem;
+    .tempo-item {
+      margin: 10px 0;
       font-weight: 700;
-      color: #7d3cff;
+      color: #7f3a3a;
     }
-
-    .label {
-      font-size: 1.1rem;
-      margin-top: 10px;
-      font-weight: 600;
-      color: #5a1f63;
-      text-transform: uppercase;
-      letter-spacing: 1.4px;
-    }
-
-    /* Texto fofo */
-    .cute-text {
-      font-size: 1.3rem;
-      font-weight: 500;
-      color: #682e99;
-      max-width: 400px;
-      line-height: 1.4;
+    #mensagem {
       font-style: italic;
+      font-size: 1.3rem;
+      color: #572020;
+      max-width: 380px;
+      line-height: 1.4;
+      margin-bottom: 30px;
+    }
+    #extra-text {
+      font-size: 1.1rem;
+      color: #6a2b2b;
+      max-width: 380px;
+      margin-bottom: 35px;
+      line-height: 1.5;
+    }
+    #game-container {
+      background: rgba(255 255 255 / 0.8);
+      border-radius: 12px;
+      padding: 20px 30px;
+      max-width: 350px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
       user-select: none;
     }
-
-    /* Animação de corações */
-    .heart {
-      position: absolute;
-      width: 18px;
-      height: 18px;
-      background: #8e44ad;
-      transform: rotate(-45deg);
-      animation: floatUp 5s linear infinite;
-      opacity: 0.8;
-      border-radius: 20px 20px 0 0;
-      pointer-events: none;
+    #heart-btn {
+      font-size: 4rem;
+      color: #e03131;
+      cursor: pointer;
+      transition: transform 0.1s ease;
+      user-select: none;
     }
-
-    .heart:before,
-    .heart:after {
-      content: "";
-      position: absolute;
-      width: 18px;
-      height: 18px;
-      background: #8e44ad;
-      border-radius: 50%;
+    #heart-btn:active {
+      transform: scale(0.9);
     }
-
-    .heart:before {
-      top: -9px;
-      left: 0;
+    #love-count {
+      font-weight: 700;
+      font-size: 2rem;
+      color: #a83232;
+      margin-top: 15px;
     }
-
-    .heart:after {
-      left: 9px;
-      top: 0;
-    }
-
-    @keyframes floatUp {
-      0% {
-        transform: translateY(0) rotate(-45deg);
-        opacity: 0.8;
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2.8rem;
       }
-      100% {
-        transform: translateY(-220px) rotate(-45deg);
-        opacity: 0;
+      #contador {
+        font-size: 1.3rem;
+        padding: 15px 20px;
+        max-width: 280px;
+      }
+      #foto {
+        width: 140px;
+        height: 140px;
+        border-radius: 70px;
+      }
+      #extra-text {
+        max-width: 90%;
+        font-size: 1rem;
+      }
+      #heart-btn {
+        font-size: 3rem;
+      }
+      #love-count {
+        font-size: 1.6rem;
       }
     }
   </style>
 </head>
 <body>
-  <h1>3 meses com Ana 💜</h1>
-  <p class="subtitle">Cada segundo ao seu lado é mágico</p>
-
-  <div class="photo-container">
-    <!-- Troque o src para a URL ou caminho da sua foto -->
-    <img id="couple-photo" src="https://i.postimg.cc/B6ZnyJbd/IMG-0131.jpg" alt="Foto do casal" />
+  <h1>3 meses com Ana 💖</h1>
+  <h2>Desde 05 de Março de 2025</h2>
+  
+  <img id="foto" src="https://i.postimg.cc/B6ZnyJbd/IMG-0131.jpg" alt="Foto do casal" />
+  
+  <div id="contador">
+    <div class="tempo-item" id="meses"></div>
+    <div class="tempo-item" id="dias"></div>
+    <div class="tempo-item" id="horas"></div>
+    <div class="tempo-item" id="minutos"></div>
+    <div class="tempo-item" id="segundos"></div>
   </div>
+  
+  <p id="mensagem">Três meses cheios de carinho, sorrisos e momentos inesquecíveis. Que venham muitos mais juntos! ❤️</p>
+  
+  <p id="extra-text">
+    Ana, cada dia ao seu lado é uma nova aventura que me enche de alegria e amor. Obrigado por ser essa pessoa incrível que transforma tudo em felicidade. Te amo demais! 💕
+  </p>
 
-  <div class="countdown" aria-label="Contagem do tempo desde o início do namoro">
-    <div class="countdown-item">
-      <div class="number" id="months">0</div>
-      <div class="label">Meses</div>
-    </div>
-    <div class="countdown-item">
-      <div class="number" id="days">0</div>
-      <div class="label">Dias</div>
-    </div>
-    <div class="countdown-item">
-      <div class="number" id="hours">0</div>
-      <div class="label">Horas</div>
-    </div>
-    <div class="countdown-item">
-      <div class="number" id="minutes">0</div>
-      <div class="label">Minutos</div>
-    </div>
-    <div class="countdown-item">
-      <div class="number" id="seconds">0</div>
-      <div class="label">Segundos</div>
-    </div>
+  <div id="game-container">
+    <div id="heart-btn" title="Clique no coração!">❤️</div>
+    <div id="love-count">0 cliques de amor</div>
   </div>
-
-  <p class="cute-text">Com você, cada instante vira eternidade 💫 Obrigado por esses 3 meses incríveis!</p>
 
   <script>
-    // Data inicial do namoro: 5 de março de 2025 às 00:00:00
-    const startDate = new Date(2025, 2, 5, 0, 0, 0); // março = 2
+    const inicioRelacionamento = new Date("2025-03-05T00:00:00");
 
-    const monthsEl = document.getElementById('months');
-    const daysEl = document.getElementById('days');
-    const hoursEl = document.getElementById('hours');
-    const minutesEl = document.getElementById('minutes');
-    const secondsEl = document.getElementById('seconds');
+    function atualizarContador() {
+      const agora = new Date();
+      let diff = agora - inicioRelacionamento;
 
-    function updateCountdown() {
-      const now = new Date();
+      if (diff < 0) diff = 0;
 
-      let totalMonths = (now.getFullYear() - startDate.getFullYear()) * 12 + (now.getMonth() - startDate.getMonth());
+      const seg = 1000;
+      const min = seg * 60;
+      const hr = min * 60;
+      const dia = hr * 24;
+      const mes = dia * 30; // média de 30 dias por mês
 
-      let tempDate = new Date(startDate.getTime());
-      tempDate.setMonth(tempDate.getMonth() + totalMonths);
+      const meses = Math.floor(diff / mes);
+      diff -= meses * mes;
 
-      let remainingTime = now - tempDate;
+      const dias = Math.floor(diff / dia);
+      diff -= dias * dia;
 
-      if (remainingTime < 0) {
-        totalMonths -= 1;
-        tempDate.setMonth(tempDate.getMonth() - 1);
-        remainingTime = now - tempDate;
-      }
+      const horas = Math.floor(diff / hr);
+      diff -= horas * hr;
 
-      const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+      const minutos = Math.floor(diff / min);
+      diff -= minutos * min;
 
-      monthsEl.textContent = totalMonths;
-      daysEl.textContent = days;
-      hoursEl.textContent = hours.toString().padStart(2, '0');
-      minutesEl.textContent = minutes.toString().padStart(2, '0');
-      secondsEl.textContent = seconds.toString().padStart(2, '0');
+      const segundos = Math.floor(diff / seg);
+
+      document.getElementById("meses").textContent = `${meses} mês${meses !== 1 ? 'es' : ''}`;
+      document.getElementById("dias").textContent = `${dias} dia${dias !== 1 ? 's' : ''}`;
+      document.getElementById("horas").textContent = `${horas} hora${horas !== 1 ? 's' : ''}`;
+      document.getElementById("minutos").textContent = `${minutos} minuto${minutos !== 1 ? 's' : ''}`;
+      document.getElementById("segundos").textContent = `${segundos} segundo${segundos !== 1 ? 's' : ''}`;
     }
 
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
+    setInterval(atualizarContador, 1000);
+    atualizarContador();
 
-    // Função pra trocar a foto (se quiser usar via JS)
-    function setPhoto(url) {
-      const photo = document.getElementById('couple-photo');
-      photo.src = url;
-    }
+    // Jogo do clique no coração
+    let loveClicks = 0;
+    const heartBtn = document.getElementById('heart-btn');
+    const loveCount = document.getElementById('love-count');
 
-    // Exemplo de uso: setPhoto('URL_DA_SUA_FOTO_AQUI');
-
-    // Corações flutuantes
-    function createHeart() {
-      const heart = document.createElement('div');
-      heart.classList.add('heart');
-      heart.style.left = Math.random() * 100 + 'vw';
-      heart.style.animationDuration = (3 + Math.random() * 3) + 's';
-      heart.style.fontSize = (10 + Math.random() * 10) + 'px';
-      document.body.appendChild(heart);
-
+    heartBtn.addEventListener('click', () => {
+      loveClicks++;
+      loveCount.textContent = `${loveClicks} clique${loveClicks !== 1 ? 's' : ''} de amor`;
+      // Pequena animação de pulso no coração
+      heartBtn.style.transform = 'scale(1.2)';
       setTimeout(() => {
-        heart.remove();
-      }, 5000);
-    }
-
-    setInterval(createHeart, 500);
+        heartBtn.style.transform = 'scale(1)';
+      }, 150);
+    });
   </script>
 </body>
 </html>
