@@ -99,6 +99,25 @@
       color: #a83232;
       margin-top: 15px;
     }
+    a#yt-button {
+      text-decoration: none;
+      margin-bottom: 25px;
+    }
+    #yt-button button {
+      background: #a83232;
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      transition: background 0.3s ease;
+    }
+    #yt-button button:hover {
+      background: #d03434;
+    }
+
     @media (max-width: 480px) {
       h1 {
         font-size: 2.8rem;
@@ -123,6 +142,10 @@
       #love-count {
         font-size: 1.6rem;
       }
+      #yt-button button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+      }
     }
   </style>
 </head>
@@ -146,6 +169,12 @@
     Ana, você é meu segredo favorito, minha calmaria e minha tempestade. Que nossa história continue intensa, verdadeira e cheia de amor. Te amo demais! 💘
   </p>
 
+  <!-- Botão com link pra música no YouTube -->
+  <a id="yt-button" href="https://youtu.be/2iUAbkwfxcY?si=D_jytLm2SKxweowv" target="_blank">
+    <button>🎧 Fala se não lembra a gente</button>
+  </a>
+
+  <!-- Mini game do coração -->
   <div id="game-container">
     <div id="heart-btn" title="Clique no coração!">❤️</div>
     <div id="love-count">0 cliques de amor</div>
