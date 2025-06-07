@@ -99,23 +99,20 @@
       color: #a83232;
       margin-top: 15px;
     }
-    a#yt-button {
-      text-decoration: none;
-      margin-bottom: 25px;
+    #player-container {
+      margin: 30px 0;
+      max-width: 90%;
     }
-    #yt-button button {
-      background: #a83232;
-      color: #fff;
-      border: none;
-      padding: 12px 25px;
-      border-radius: 30px;
+    #player-text {
+      margin-bottom: 10px;
       font-size: 1rem;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      transition: background 0.3s ease;
+      color: #ffaaaa;
     }
-    #yt-button button:hover {
-      background: #d03434;
+    audio {
+      width: 100%;
+      max-width: 360px;
+      border-radius: 10px;
+      outline: none;
     }
 
     @media (max-width: 480px) {
@@ -142,9 +139,8 @@
       #love-count {
         font-size: 1.6rem;
       }
-      #yt-button button {
+      #player-text {
         font-size: 0.9rem;
-        padding: 10px 20px;
       }
     }
   </style>
@@ -169,10 +165,14 @@
     Ana, você é meu segredo favorito, minha calmaria e minha tempestade. Que nossa história continue intensa, verdadeira e cheia de amor. Te amo demais! 💘
   </p>
 
-  <!-- Botão com link pra música no YouTube -->
-  <a id="yt-button" href="https://youtu.be/2iUAbkwfxcY?si=D_jytLm2SKxweowv" target="_blank">
-    <button>🎧 Fala se não lembra a gente</button>
-  </a>
+  <!-- Música integrada -->
+  <div id="player-container">
+    <div id="player-text">🎶 Fala se essa música não lembra a gente:</div>
+    <audio controls>
+      <source src="https://drive.google.com/uc?export=download&id=1Zwg26kkGMUn2wUkVukwinqJ-PRUX9vyO" type="audio/mp3">
+      Seu navegador não suporta áudio.
+    </audio>
+  </div>
 
   <!-- Mini game do coração -->
   <div id="game-container">
